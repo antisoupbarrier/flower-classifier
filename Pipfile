@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+tensorflow-protobuf = "*"
+grpcio = "*"
+flask = "*"
+protobuf = "*"
+pillow = "*"
+keras-image-helper = {editable = true, ref = "main", git = "https://github.com/antisoupbarrier/keras-image-helper.git"}
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

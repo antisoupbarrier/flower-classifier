@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tf-serving-flower-model
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tf-serving-flower-model
+  template:
+    metadata:
+      labels:
+        app: tf-serving-flower-model
+    spec:
+      containers:
+      - name: tf-serving-flower-model
+        image: flower-gateway-v1
+        resources:
+          limits:
+            memory: "2048Mi"
+            cpu: "1"
+        ports:
+        - containerPort: 8500
